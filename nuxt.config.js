@@ -6,15 +6,52 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    // titleTemplate: '%s - 最後の晩餐',
+    title: '最後の晩餐',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1, user-scalable=no'
+      },
       {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: '最後の晩餐,6人の料理人と隻眼の少女,6人の料理人,ホラーゲーム'
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'http://the-last-dinner.club'
+      },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'ゲーム制作チーム 最後の晩餐'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          'ゲーム制作チーム最後の晩餐の公式HPです。ホラーアクションADV「6人の料理人と隻眼の少女~FullCourse~」好評配信中！'
+      },
+      { hid: 'og:image', property: 'og:image', content: '/img/CD_top.jpg' },
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
+      {
+        hid: 'twitter:site',
+        name: 'twitter:site',
+        content: '@the_last_dinner'
+      },
+      {
+        hid: 'twitter:creator',
+        name: 'twitter:creator',
+        content: '@the_last_dinner'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
