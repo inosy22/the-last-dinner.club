@@ -33,10 +33,14 @@
     </v-flex>
     <v-flex xs12 sm12>
       <div class="top-image-wrapper">
-        <img class="top-image" src="/img/6chefs_top.jpg" />
         <div class="top-image-overlay" />
-        <div class="top-image-inner">
-          最後の晩餐とは
+        <div class="top-image-inner-text">
+          <p class="top-image-inner-header">最後の晩餐とは</p>
+          <p>同人ゲーム制作サークルです</p>
+          <p>フリーホラーゲームを中心に</p>
+          <p>Unity/Cocos2d-xなどを利用して</p>
+          <p>ハイクオリティのゲームを</p>
+          <p>制作することを目指しています</p>
         </div>
       </div>
     </v-flex>
@@ -60,23 +64,15 @@
 
 <style scoped>
 .top-image-wrapper {
+  display: flex;
   position: relative;
-}
-
-.top-image-inner {
-  position: absolute;
-  color: white;
-  font-weight: bold;
-  font-size: 2em;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.top-image {
+  justify-content: center;
+  align-items: center;
+  background-image: url('/img/6chefs_top.jpg');
+  background-position: center;
+  background-size: cover;
   width: 100%;
+  height: 300px;
 }
 
 .top-image-overlay {
@@ -86,7 +82,20 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 0;
+}
+
+.top-image-inner-text {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.top-image-inner-header {
+  font-size: 1.5em;
+  color: orange;
 }
 </style>
 
