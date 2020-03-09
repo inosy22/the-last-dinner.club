@@ -65,9 +65,9 @@ a:hover > .circle > i {
 </style>
 
 <script>
-import { createComponent } from '@vue/composition-api'
+import { defineComponent } from '@vue/composition-api'
 
-export default createComponent({
+export default defineComponent({
   props: {
     icon: {
       type: String,

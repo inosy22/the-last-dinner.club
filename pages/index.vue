@@ -53,10 +53,10 @@
 </template>
 
 <script>
-import { createComponent } from '@vue/composition-api'
+import { defineComponent } from '@vue/composition-api'
 import CircleIconLink from '@/components/CircleIconLink'
 
-export default createComponent({
+export default defineComponent({
   components: {
     CircleIconLink
   }
