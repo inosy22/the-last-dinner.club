@@ -32,7 +32,13 @@
       />
     </v-flex>
     <v-flex xs12 sm12>
-      <img src="/img/6chefs_top.jpg" width="100%" />
+      <div class="top-image-wrapper">
+        <img class="top-image" src="/img/6chefs_top.jpg" />
+        <div class="top-image-overlay" />
+        <div class="top-image-inner">
+          最後の晩餐とは
+        </div>
+      </div>
     </v-flex>
     <v-flex xs12 sm6>
       <blockquote>
@@ -51,6 +57,38 @@
     </v-flex>
   </v-layout>
 </template>
+
+<style scoped>
+.top-image-wrapper {
+  position: relative;
+}
+
+.top-image-inner {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.top-image {
+  width: 100%;
+}
+
+.top-image-overlay {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+</style>
 
 <script>
 import { defineComponent } from '@vue/composition-api'
