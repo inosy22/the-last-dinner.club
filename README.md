@@ -1,6 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f12707bc-9c9d-4bac-bb3a-1dd2e5773660/deploy-status)](https://app.netlify.com/sites/the-last-dinner/deploys)
+
 # the-last-dinner.club
 
-> My fantabulous Nuxt.js project
+> ゲーム制作サークル「最後の晩餐」公式ホームページ
 
 ## Build Setup
 
