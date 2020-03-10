@@ -1,14 +1,14 @@
 <template>
   <v-layout row wrap>
     <v-flex xs12 sm6 pa-1>
-      <v-row :justify="$vuetify.breakpoint.xs ? 'center' : 'start'">
+      <v-row justify="center">
         <a href="/">
           <img src="/img/the_last_dinner_logo.png" height="90px" />
         </a>
       </v-row>
     </v-flex>
     <v-flex xs12 sm6 pa-3>
-      <v-row :justify="$vuetify.breakpoint.xs ? 'center' : 'end'">
+      <v-row justify="center">
         <CircleIconLink
           icon="mdi-silverware-fork-knife"
           title="6人の料理人"
