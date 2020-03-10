@@ -6,11 +6,14 @@
         <div class="top-image-wrapper">
           <div class="top-image-overlay" />
           <div class="top-image-inner-text">
-            <p class="top-image-inner-header">海外旅行！</p>
+            <p class="top-image-inner-header">悲劇の「晩餐会」から1年</p>
             <p>あの悲劇の晩餐会から一年</p>
             <p>今度の6人の料理人はみんなで海外旅行！</p>
             <p>しかし、彼らの旅が何事もなく終わるはずもなく...</p>
             <p>全ての謎が今明かされる！！！</p>
+            <p>改めて問おう。</p>
+            <p>君には・・・</p>
+            <p>食べられる覚悟はあるかい・・・？</p>
           </div>
         </div>
       </v-flex>
@@ -28,7 +31,7 @@
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 300px;
+  height: 400px;
 }
 
 .top-image-overlay {
