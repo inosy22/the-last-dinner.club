@@ -21,6 +21,54 @@
           </div>
         </div>
       </v-flex>
+      <v-flex xs6 sm3 pa-3>
+        <v-row justify="center">
+          <CircleIconLink
+            icon="mdi-download"
+            title="ダウンロード"
+            link="https://www.freem.ne.jp/win/game/16125"
+          />
+        </v-row>
+      </v-flex>
+      <v-flex xs6 sm3 pa-3>
+        <v-row justify="center">
+          <CircleIconLink
+            icon="mdi-gamepad-variant"
+            title="ゲーム紹介"
+            link="/6chefs/introduction"
+          />
+        </v-row>
+      </v-flex>
+      <v-flex xs6 sm3 pa-3>
+        <v-row justify="center">
+          <CircleIconLink
+            icon="mdi-file-document-outline"
+            title="説明書"
+            link="/6chefs/manual"
+          />
+        </v-row>
+      </v-flex>
+      <v-flex xs6 sm3 pa-3>
+        <v-row justify="center">
+          <CircleIconLink
+            icon="mdi-star"
+            title="攻略のヒント"
+            link="/6chefs/hint"
+          />
+        </v-row>
+      </v-flex>
+      <v-flex xs12 sm6 pa-2>
+        <v-row justify="center">
+          <div class="embed-responsive embed-responsive-4by3">
+            <iframe
+              class="embed-responsive-item"
+              src="https://www.youtube.com/embed/uj_5n0Fnhjw"
+              frameborder="1"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </v-row>
+      </v-flex>
     </v-layout>
   </div>
 </template>
@@ -64,11 +112,13 @@
 
 <script>
 import { defineComponent } from '@vue/composition-api'
+import CircleIconLink from '@/components/CircleIconLink'
 import NewsItem from '@/components/NewsItem'
 import GlobalHeaderFlex from '@/components/GlobalHeaderFlex'
 
 export default defineComponent({
   components: {
+    CircleIconLink,
     NewsItem,
     GlobalHeaderFlex
   }
