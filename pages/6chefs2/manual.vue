@@ -91,7 +91,7 @@
         <br />
       </v-flex>
       <v-flex xs12 sm12 pa-2>
-        <HeadLine2 title="戦闘イベント・操作方法" />
+        <HeadLine2 id="battle" title="戦闘イベント・操作方法" />
         <p class="text-warning font20">戦闘イベントについて</p>
         <p>
           一部のイベントでは戦闘を行うことがあります<br />
