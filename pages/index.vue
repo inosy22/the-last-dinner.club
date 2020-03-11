@@ -17,6 +17,7 @@
       </v-flex>
       <v-flex xs12 sm6 pa-3>
         <h1 class="header">制作ゲーム</h1>
+        <p style="color: orange">完全新作も現在鋭意製作中！</p>
         <a href="https://www.freem.ne.jp/win/game/16125">
           <img
             src="/img/freem_13_programing_gold.jpg"
@@ -35,6 +36,9 @@
         <h1 class="header">NEWS</h1>
         <v-card style="overflow: scroll; height: 450px;">
           <v-card-text>
+            <NewsItem date="2020/03/17" color="primary" type="更新">
+              最後の晩餐公式ホームページのリニューアルを行いました！
+            </NewsItem>
             <NewsItem date="2018/05/02" color="green" type="リリース">
               「6人の料理人と隻眼の少女～Full
               course～」Ver.1.2の提供を開始しました。
