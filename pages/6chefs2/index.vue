@@ -6,7 +6,7 @@
         <div class="top-image-wrapper">
           <div class="top-image-overlay" />
           <div class="top-image-inner-text">
-            <p class="top-image-inner-header">悲劇の「晩餐会」から1年</p>
+            <p class="top-image-inner-header">6人の料理人と隻眼の少女2</p>
             <p>あの悲劇の晩餐会から一年</p>
             <p>今度の6人の料理人はみんなで海外旅行！</p>
             <p>しかし、彼らの旅が何事もなく終わるはずもなく...</p>
@@ -53,17 +53,36 @@
           />
         </v-row>
       </v-flex>
-      <v-flex xs12 sm6 pa-2>
+      <v-flex xs12 sm6 pa-3>
         <v-row justify="center">
-          <div class="embed-responsive embed-responsive-4by3">
-            <iframe
-              class="embed-responsive-item"
-              src="https://www.youtube.com/embed/oGGY-QaC2eM"
-              frameborder="1"
-              allowfullscreen
-            ></iframe>
-          </div>
+          <v-card style="width:100%">
+            <v-card-title>
+              【PV】6人の料理人と隻眼の少女2
+            </v-card-title>
+            <v-card-text>
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/oGGY-QaC2eM"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </v-card-text>
+          </v-card>
         </v-row>
+      </v-flex>
+      <v-flex xs12 sm6 pa-3>
+        <v-simple-table>
+          <template v-slot:default>
+            <tbody>
+              <tr v-for="item in table" :key="item.key">
+                <td>{{ item.key }}</td>
+                <td>{{ item.value }}</td>
+              </tr>
+            </tbody>
+          </template>
+        </v-simple-table>
       </v-flex>
     </v-layout>
   </div>
@@ -107,16 +126,37 @@
 </style>
 
 <script>
-import { defineComponent } from '@vue/composition-api'
+import Vue from 'vue'
+import VueCompositionApi, { defineComponent } from '@vue/composition-api'
 import CircleIconLink from '@/components/CircleIconLink'
 import NewsItem from '@/components/NewsItem'
 import GlobalHeaderFlex from '@/components/GlobalHeaderFlex'
+
+Vue.use(VueCompositionApi)
 
 export default defineComponent({
   components: {
     CircleIconLink,
     NewsItem,
     GlobalHeaderFlex
+  },
+  setup() {
+    const table = [
+      { key: 'タイトル', value: '6人の料理人と隻眼の少女2' },
+      { key: 'バージョン', value: '2.1 (2018/05/03)' },
+      { key: 'ジャンル', value: 'ホラーアクションADV' },
+      { key: '対象年齢', value: '15歳以上 ※暴力的な表現あり' },
+      { key: 'プレイ人数', value: '1人' },
+      { key: 'プレイ時間', value: '1プレイ約2時間' },
+      { key: 'エンディング数', value: '2つ' },
+      { key: 'ハード', value: 'PC' },
+      { key: 'OS', value: 'Windows' },
+      { key: '開発環境', value: 'C++/Cocos2d-x3.10' },
+      { key: '必要ランタイム', value: 'なし' }
+    ]
+    return {
+      table
+    }
   }
 })
 </script>
