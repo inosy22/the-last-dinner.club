@@ -6,7 +6,6 @@ export default {
    ** Headers of the page
    */
   head: {
-    // titleTemplate: '%s - 最後の晩餐',
     title: '最後の晩餐',
     meta: [
       { charset: 'utf-8' },

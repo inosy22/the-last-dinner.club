@@ -157,6 +157,7 @@ import CircleIconLink from '@/components/CircleIconLink'
 import NewsItem from '@/components/NewsItem'
 import GlobalHeaderFlex from '@/components/GlobalHeaderFlex'
 import GameHeader6chefs from '@/components/GameHeader6chefs'
+import VueHeaderHelper from '@/lib/VueHeaderHelper'
 
 Vue.use(VueCompositionApi)
 
@@ -166,6 +167,13 @@ export default defineComponent({
     NewsItem,
     GlobalHeaderFlex,
     GameHeader6chefs
+  },
+  head() {
+    const title = '6人の料理人と隻眼の少女'
+    const description =
+      'ホラーアクションアドベンチャーゲーム「6人の料理人と隻眼の少女」公式サイト'
+    const url = '/6chefs'
+    return VueHeaderHelper.generateHeadObject(title, description, url)
   },
   setup() {
     const table = [

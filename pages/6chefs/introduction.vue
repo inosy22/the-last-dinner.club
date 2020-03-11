@@ -55,6 +55,7 @@ import Vue from 'vue'
 import VueCompositionApi, { defineComponent } from '@vue/composition-api'
 import GlobalHeaderFlex from '@/components/GlobalHeaderFlex'
 import HeadLine2 from '@/components/HeadLine2'
+import VueHeaderHelper from '@/lib/VueHeaderHelper'
 
 Vue.use(VueCompositionApi)
 
@@ -62,6 +63,13 @@ export default defineComponent({
   components: {
     GlobalHeaderFlex,
     HeadLine2
+  },
+  head() {
+    const title = 'ゲーム紹介 - 6人の料理人と隻眼の少女'
+    const description =
+      'ゲーム紹介 - ホラーアクションアドベンチャーゲーム「6人の料理人と隻眼の少女」公式サイト'
+    const url = '/6chefs/introduction'
+    return VueHeaderHelper.generateHeadObject(title, description, url)
   },
   setup() {
     const breadclumbs = [

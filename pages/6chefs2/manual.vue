@@ -281,11 +281,19 @@
 import { defineComponent } from '@vue/composition-api'
 import GlobalHeaderFlex from '@/components/GlobalHeaderFlex'
 import HeadLine2 from '@/components/HeadLine2'
+import VueHeaderHelper from '@/lib/VueHeaderHelper'
 
 export default defineComponent({
   components: {
     GlobalHeaderFlex,
     HeadLine2
+  },
+  head() {
+    const title = '説明書 - 6人の料理人と隻眼の少女2'
+    const description =
+      '説明書 - ホラーアクションアドベンチャーゲーム「6人の料理人と隻眼の少女2」公式サイト'
+    const url = '/6chefs2/manual'
+    return VueHeaderHelper.generateHeadObject(title, description, url)
   }
 })
 </script>
