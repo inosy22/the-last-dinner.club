@@ -16,7 +16,7 @@
         </div>
       </v-flex>
       <v-flex xs12 sm6 pa-3>
-        <h1>制作ゲーム</h1>
+        <h1 class="header">制作ゲーム</h1>
         <a href="https://www.freem.ne.jp/win/game/16125">
           <img
             src="/img/freem_13_programing_gold.jpg"
@@ -32,7 +32,7 @@
         </a>
       </v-flex>
       <v-flex xs12 sm6 pa-3>
-        <h1>NEWS</h1>
+        <h1 class="header">NEWS</h1>
         <v-card style="overflow: scroll; height: 450px;">
           <v-card-text>
             <NewsItem date="2018/05/02" color="green" type="リリース">
@@ -134,6 +134,10 @@
 .top-image-inner-header {
   font-size: 1.5em;
   color: orange;
+}
+
+.header {
+  padding: 3px;
 }
 </style>
 
