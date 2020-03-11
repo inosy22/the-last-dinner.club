@@ -17,46 +17,12 @@
           </div>
         </div>
       </v-flex>
-      <v-flex xs6 sm3 pa-3>
-        <v-row justify="center">
-          <CircleIconLink
-            icon="mdi-download"
-            title="ダウンロード"
-            link="https://www.freem.ne.jp/win/game/16125"
-          />
-        </v-row>
-      </v-flex>
-      <v-flex xs6 sm3 pa-3>
-        <v-row justify="center">
-          <CircleIconLink
-            icon="mdi-gamepad-variant"
-            title="ゲーム紹介"
-            link="/6chefs2/introduction"
-          />
-        </v-row>
-      </v-flex>
-      <v-flex xs6 sm3 pa-3>
-        <v-row justify="center">
-          <CircleIconLink
-            icon="mdi-file-document-outline"
-            title="説明書"
-            link="/6chefs2/manual"
-          />
-        </v-row>
-      </v-flex>
-      <v-flex xs6 sm3 pa-3>
-        <v-row justify="center">
-          <CircleIconLink
-            icon="mdi-star"
-            title="攻略のヒント"
-            link="/6chefs2/hint"
-          />
-        </v-row>
-      </v-flex>
+      <GameHeader6chefs2 />
+      <v-flex xs12 sm3 />
       <v-flex xs12 sm6 pa-3>
         <v-row justify="center">
           <v-card style="width:100%">
-            <v-card-title>
+            <v-card-title style="text-aling: center">
               【PV】6人の料理人と隻眼の少女2
             </v-card-title>
             <v-card-text>
@@ -72,7 +38,9 @@
           </v-card>
         </v-row>
       </v-flex>
+      <v-flex xs12 sm3 />
       <v-flex xs12 sm6 pa-3>
+        <h2 class="header">ゲーム概要</h2>
         <v-simple-table>
           <template v-slot:default>
             <tbody>
@@ -83,6 +51,51 @@
             </tbody>
           </template>
         </v-simple-table>
+      </v-flex>
+      <v-flex xs12 sm6 pa-3>
+        <h2 class="header">ゲーム更新履歴</h2>
+        <v-card style="overflow: scroll; height: 450px;">
+          <v-card-text>
+            <NewsItem date="2017/11/02" color="red" type="Ver2.0">
+              <p>
+                セット版「6人の料理人と隻眼の少女〜Full cource〜」の提供開始
+              </p>
+            </NewsItem>
+            <NewsItem date="2016/08/09" color="red" type="Ver1.4">
+              <ul>
+                <li>連打イベントでPCスペックによっては落ちる問題を改善</li>
+              </ul>
+            </NewsItem>
+            <NewsItem date="2017/04/02" color="red" type="Ver1.3">
+              <ul>
+                <li>エンディングの表現修正</li>
+                <li>キャラクター及びイベントグラフィックの修正</li>
+                <li>マップの修正</li>
+                <li>その他細かいバグの修正</li>
+              </ul>
+            </NewsItem>
+            <NewsItem date="2017/03/04" color="red" type="Ver1.2">
+              <ul>
+                <li>
+                  スペックの低いPCでエンディングが正しく表示されない状態に対応
+                </li>
+              </ul>
+            </NewsItem>
+            <NewsItem date="2017/03/03" color="red" type="Ver1.1">
+              <p>公式サイトおよびふりーむでのダウンロード版の提供開始</p>
+              <ul>
+                <li>キャラクター絵・イベント絵を追加</li>
+                <li>装備すると効果を発揮するアイテムを2種類追加</li>
+                <li>オープニング動画の追加</li>
+                <li>トロフィーコンプリート特典追加</li>
+                <li>その他細かい表現などの修正</li>
+              </ul>
+            </NewsItem>
+            <NewsItem date="2016/12/29" color="red" type="Ver1.0β">
+              コミックマーケット91で先行販売
+            </NewsItem>
+          </v-card-text>
+        </v-card>
       </v-flex>
     </v-layout>
   </div>
@@ -123,6 +136,10 @@
   font-size: 1.5em;
   color: orange;
 }
+
+.header {
+  padding: 3px;
+}
 </style>
 
 <script>
@@ -131,6 +148,7 @@ import VueCompositionApi, { defineComponent } from '@vue/composition-api'
 import CircleIconLink from '@/components/CircleIconLink'
 import NewsItem from '@/components/NewsItem'
 import GlobalHeaderFlex from '@/components/GlobalHeaderFlex'
+import GameHeader6chefs2 from '@/components/GameHeader6chefs2'
 
 Vue.use(VueCompositionApi)
 
@@ -138,7 +156,8 @@ export default defineComponent({
   components: {
     CircleIconLink,
     NewsItem,
-    GlobalHeaderFlex
+    GlobalHeaderFlex,
+    GameHeader6chefs2
   },
   setup() {
     const table = [
