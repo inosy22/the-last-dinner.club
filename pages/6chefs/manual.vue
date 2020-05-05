@@ -7,11 +7,6 @@
       </v-flex>
       <v-flex xs12 sm12 pa-2>
         <HeadLine2 title="インストール" />
-        <p class="text-warning font20">MacOSX</p>
-        <p>
-          6chefs.dmgファイルを開き、デスクトップやFinderにあるボリューム「6chefs」を開き、「6人の料理人と隻眼の少女.app」ファイルをApplicationフォルダへ移動してください。
-        </p>
-        <br />
         <p class="text-warning font20">Windows</p>
         <p>
           6chefs_setup.exeファイルを実行してください。

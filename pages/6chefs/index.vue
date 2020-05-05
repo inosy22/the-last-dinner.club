@@ -185,7 +185,7 @@ export default defineComponent({
       { key: 'プレイ時間', value: '1プレイ約2時間' },
       { key: 'エンディング数', value: '3つ' },
       { key: 'ハード', value: 'PC' },
-      { key: 'OS', value: 'MacOS,Windows' },
+      { key: 'OS', value: 'Windows' },
       { key: '開発環境', value: 'C++/Cocos2d-x3.10' },
       { key: '必要ランタイム', value: 'なし' }
     ]
